@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --bg-color: linear-gradient(#04757b, rgba(204, 244, 119, 0.915)), url("images/bg-image.png");
+  --bg-color: linear-gradient(#04757b, rgba(204, 244, 119, 0.915)),
+    url("images/bg-image.png");
   --accent-color: #762074;
   --zoom: 0.9;
 }
@@ -23,20 +24,16 @@
 }
 
 main {
-  /* width: 400px; */
   width: 350px;
   height: 75%;
   display: flex;
   flex-direction: column;
   align-items: center;
   animation: 2.5s fadeElement ease-in;
-  /* background-color: #cce2ce81; */
-  /* border-radius: 20px; */
-  /* border: 3px teal solid; */
 }
 
 .avatar {
-  width: 250px;
+  width: 10rem;
   animation: fadeElement 2s ease-in forwards;
   opacity: 0;
   animation-delay: 1s;
@@ -46,24 +43,21 @@ main {
   color: teal;
   text-transform: uppercase;
   font-family: itim !important;
-  font-size: 3.5rem;
+  font-size: 2.75rem;
 }
 
 p {
-
   color: rgb(3, 60, 60);
   font-size: 18px;
   font-family: itim;
-  /* text-align: justify; */
   margin: 10px;
   width: 50%;
 }
 
-h3{
+h3 {
   font-family: itim;
   color: white;
-  font-size: 28px;
- 
+  font-size: 24px;
 }
 
 .btn-container {
@@ -83,7 +77,7 @@ h3{
   transition: all 1s ease-in-out;
 }
 
-.key:hover{
+.key:hover {
   scale: 1.25;
   transition: all 1s ease-in-out;
   color: aquamarine;
@@ -97,26 +91,10 @@ i:first-child {
   transition: all 0.5s ease-in-out;
 }
 
-ul{
+ul {
   font-family: itim;
   color: rgb(1, 62, 62);
 }
-
-footer{
-  position: absolute;
-  width: 200px;
-  font-family: itim;
-  height: 25px;
-  width: 300px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: blue;
-
-}
-
-
 
 @keyframes fadeElement {
   0% {
@@ -126,12 +104,6 @@ footer{
     opacity: 1;
   }
 }
-
-/* @media only screen and (min-width:1025px){
-  .container{
-    background-color: aqua;
-  }
-} */
 
 /* iPads/Tablets  (481px - 761px)*/
 /* Small screens, Laptops (769px — 1024px)  */
@@ -153,7 +125,6 @@ footer{
   }
 
   .avatar {
-    width: 250px;
     margin-top: -5%;
   }
 
@@ -162,7 +133,6 @@ footer{
       margin-top: 0px;
     }
   }
-
 
   i {
     /* margin-top: 10px !important; */
@@ -183,8 +153,4 @@ footer{
     font-size: 3rem;
     color: teal;
   }
-
-
 }
-
-
