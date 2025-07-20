@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --bg-color: #9b76e6;
+  --bg-color: linear-gradient(#04757b, rgba(204, 244, 119, 0.915)), url("images/bg-image.png");
   --accent-color: #762074;
-  --zoom:0.9;
+  --zoom: 0.9;
 }
 
 * {
@@ -14,7 +14,7 @@
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
-  background: linear-gradient(#9b76e6, #762075f1), url("images/bg-image.png");
+  background: var(--bg-color);
   background-position: center;
   flex-direction: column;
   display: flex;
@@ -23,12 +23,16 @@
 }
 
 main {
-  width: auto;
+  /* width: 400px; */
+  width: 350px;
   height: 75%;
   display: flex;
   flex-direction: column;
   align-items: center;
   animation: 2.5s fadeElement ease-in;
+  /* background-color: #cce2ce81; */
+  /* border-radius: 20px; */
+  /* border: 3px teal solid; */
 }
 
 .avatar {
@@ -38,47 +42,81 @@ main {
   animation-delay: 1s;
 }
 
-.message {
-  color: #4f27a0;
+.header {
+  color: teal;
   text-transform: uppercase;
   font-family: itim !important;
-  font-size: 2rem;
+  font-size: 3.5rem;
 }
 
 p {
-  color: white;
+
+  color: rgb(3, 60, 60);
   font-size: 18px;
   font-family: itim;
-  text-align: justify;
+  /* text-align: justify; */
   margin: 10px;
   width: 50%;
 }
 
-.btn-container {
-  margin-top: 40px;
-}
-
-i {
-  margin-top: 10px !important;
-  font-size: 30px;
-  background-color: #6c3ec7bd;
-  border-radius: 100%;
-  padding: 10px 15px;
-  color: rgba(255, 255, 255, 0.603);
-  box-shadow: #341a68 0px 0px 5px;
-  margin: 10px;
-  transition: all .5s ease-in-out;
-  border: 1px solid rgba(255, 255, 255, 0.397);
-}
-
-i:hover {
-  background-color: #6c3ec7;
+h3{
+  font-family: itim;
   color: white;
-  box-shadow: #341a68bd 0px 3px 3px;
-  transition: all .5s ease-in-out;
-  padding: 20px 25px;
-  font-size: 32px;
+  font-size: 28px;
+ 
 }
+
+.btn-container {
+  display: flex;
+}
+
+.key {
+  width: 85px;
+  height: 85px;
+  background: url("images/key.png");
+  background-size: 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease-in-out;
+}
+
+.key:hover{
+  scale: 1.25;
+  transition: all 1s ease-in-out;
+  color: aquamarine;
+}
+
+i:first-child {
+  font-size: 35px;
+  border-radius: 10%;
+  padding: 5px 10px;
+  color: rgb(2, 117, 117);
+  transition: all 0.5s ease-in-out;
+}
+
+ul{
+  font-family: itim;
+  color: rgb(1, 62, 62);
+}
+
+footer{
+  position: absolute;
+  width: 200px;
+  font-family: itim;
+  height: 25px;
+  width: 300px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+
+}
+
+
 
 @keyframes fadeElement {
   0% {
@@ -101,12 +139,12 @@ i:hover {
 /* Extra large screens, TV (1201px) */
 
 /* Mobile devices (320px — 480px) */
-@media (max-width:480px){
+@media (max-width: 480px) {
   .container {
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
-    background: linear-gradient(#9b76e6, #762075f1), url("images/bg-image.png");
+    background: var(--bg-color);
     background-position: center;
     flex-direction: column;
     display: flex;
@@ -114,33 +152,39 @@ i:hover {
     justify-content: center;
   }
 
-.avatar{
-  width: 250px;
-}
-
-.btn-container{
-  .btn-container {
-    margin-top: 0px;
+  .avatar {
+    width: 250px;
+    margin-top: -5%;
   }
+
+  .btn-container {
+    .btn-container {
+      margin-top: 0px;
+    }
+  }
+
+
+  i {
+    /* margin-top: 10px !important; */
+    /* font-size: 5rem; */
+    /* border-radius: 100%; */
+    /* padding: 10px 15px; */
+    /* color: rgba(255, 255, 255, 0.603); */
+    /* box-shadow: #341a68 0px 0px 5px; */
+    margin: 10px;
+    transition: all 0.5s ease-in-out;
+    /* border: 1px solid rgba(255, 255, 255, 0.397); */
+  }
+  p {
+    font-size: 1rem;
+    text-wrap: none;
+  }
+  .header {
+    font-size: 3rem;
+    color: teal;
+  }
+
+
 }
 
-i {
-  margin-top: 10px !important;
-  font-size: 1.5rem;
-  background-color: #6c3ec7bd;
-  border-radius: 100%;
-  padding: 10px 15px;
-  color: rgba(255, 255, 255, 0.603);
-  box-shadow: #341a68 0px 0px 5px;
-  margin: 10px;
-  transition: all .5s ease-in-out;
-  border: 1px solid rgba(255, 255, 255, 0.397);
-}
-p{
-  font-size: 1rem;
-  text-wrap: none;
-}
-.message{
-  font-size: 1.5rem;
-}
-}
+
