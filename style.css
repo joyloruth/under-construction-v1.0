@@ -3,7 +3,6 @@
 :root {
   --bg-color: linear-gradient(#04757b, rgba(204, 244, 119, 0.915)),
     url("images/bg-image.png");
-  --accent-color: #762074;
   --zoom: 0.9;
 }
 
@@ -135,15 +134,7 @@ ul {
   }
 
   i {
-    /* margin-top: 10px !important; */
-    /* font-size: 5rem; */
-    /* border-radius: 100%; */
-    /* padding: 10px 15px; */
-    /* color: rgba(255, 255, 255, 0.603); */
-    /* box-shadow: #341a68 0px 0px 5px; */
     margin: 10px;
-    transition: all 0.5s ease-in-out;
-    /* border: 1px solid rgba(255, 255, 255, 0.397); */
   }
   p {
     font-size: 1rem;
